@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Generative AI: The Largest Advance in Modern Technology</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0f0e0c;
+    --paper: #faf8f3;
+    --mid: #6b6560;
+    --accent: #c0392b;
+    --rule: #d4cfc7;
+    --highlight: #f0ebe0;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 18px;
+    line-height: 1.8;
+  }
+
+  /* ── MASTHEAD ── */
+  header {
+    border-bottom: 3px double var(--ink);
+    padding: 2.5rem 0 1.5rem;
+    text-align: center;
+  }
+
+  .pub-label {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--mid);
+    margin-bottom: 1.2rem;
+  }
+
+  header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    font-weight: 900;
+    line-height: 1.1;
+    max-width: 780px;
+    margin: 0 auto 1rem;
+    letter-spacing: -0.02em;
+  }
+
+  .deck {
+    font-family: 'Source Serif 4', serif;
+    font-style: italic;
+    font-size: 1.15rem;
+    color: var(--mid);
+    max-width: 580px;
+    margin: 0 auto 1.5rem;
+  }
+
+  .byline {
+    font-size: 0.82rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--mid);
+    border-top: 1px solid var(--rule);
+    padding-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .byline span strong { color: var(--ink); }
+
+  /* ── LAYOUT ── */
+  .container {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  article {
+    padding: 3rem 0 5rem;
+  }
+
+  /* ── DROPCAP INTRO ── */
+  .intro {
+    font-size: 1.12rem;
+    border-left: 4px solid var(--accent);
+    padding-left: 1.5rem;
+    margin-bottom: 2.5rem;
+    font-style: italic;
+    color: #2e2b27;
+  }
+
+  .intro::first-letter {
+    font-family: 'Playfair Display', serif;
+    font-size: 4.5rem;
+    font-weight: 900;
+    float: left;
+    line-height: 0.8;
+    margin: 0.05em 0.12em 0 0;
+    color: var(--accent);
+  }
+
+  /* ── SECTION HEADINGS ── */
+  h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin: 3rem 0 1rem;
+    position: relative;
+    padding-bottom: 0.6rem;
+  }
+
+  h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 3rem; height: 2px;
+    background: var(--accent);
+  }
+
+  h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin: 2rem 0 0.5rem;
+    font-style: italic;
+  }
+
+  p { margin-bottom: 1.4rem; }
+
+  /* ── PULL QUOTE ── */
+  .pull-quote {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 1.4;
+    border-top: 3px solid var(--ink);
+    border-bottom: 3px solid var(--ink);
+    padding: 1.5rem 0;
+    margin: 3rem 0;
+    text-align: center;
+    color: #1a1814;
+  }
+
+  .pull-quote cite {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--mid);
+    margin-top: 0.8rem;
+    font-style: normal;
+  }
+
+  /* ── STAT BOXES ── */
+  .stat-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    margin: 2.5rem 0;
+  }
+
+  .stat {
+    background: var(--paper);
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  .stat .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.4rem;
+    font-weight: 900;
+    color: var(--accent);
+    line-height: 1;
+    display: block;
+  }
+
+  .stat .label {
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--mid);
+    margin-top: 0.4rem;
+    display: block;
+  }
+
+  /* ── CALLOUT BOX ── */
+  .callout {
+    background: var(--highlight);
+    border-left: 4px solid var(--accent);
+    padding: 1.4rem 1.6rem;
+    margin: 2rem 0;
+  }
+
+  .callout-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.6rem;
+  }
+
+  .callout p { margin-bottom: 0; font-size: 0.95rem; }
+
+  /* ── TECH TABLE ── */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    font-size: 0.92rem;
+  }
+
+  thead tr {
+    border-bottom: 2px solid var(--ink);
+  }
+
+  th {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    text-align: left;
+    padding: 0.6rem 0.8rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  td {
+    padding: 0.75rem 0.8rem;
+    border-bottom: 1px solid var(--rule);
+    vertical-align: top;
+  }
+
+  tr:last-child td { border-bottom: none; }
+
+  td:first-child { font-weight: 600; }
+
+  /* ── CHALLENGE GRID ── */
+  .challenge-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+
+  .challenge-card {
+    border: 1px solid var(--rule);
+    padding: 1.2rem;
+  }
+
+  .challenge-card .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--rule);
+    line-height: 1;
+    display: block;
+    margin-bottom: 0.3rem;
+  }
+
+  .challenge-card strong {
+    display: block;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 0.4rem;
+  }
+
+  .challenge-card p { font-size: 0.88rem; margin: 0; color: var(--mid); }
+
+  /* ── FOOTER ── */
+  footer {
+    border-top: 3px double var(--ink);
+    padding: 2rem 0;
+    text-align: center;
+    font-size: 0.78rem;
+    color: var(--mid);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  footer .author-bio {
+    font-family: 'Source Serif 4', serif;
+    font-style: italic;
+    font-size: 0.92rem;
+    text-transform: none;
+    letter-spacing: 0;
+    max-width: 500px;
+    margin: 0 auto 1rem;
+    color: var(--ink);
+  }
+
+  @media (max-width: 600px) {
+    .stat-row { grid-template-columns: 1fr; }
+    .challenge-grid { grid-template-columns: 1fr; }
+    body { font-size: 16px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <p class="pub-label">Technology &nbsp;·&nbsp; Artificial Intelligence &nbsp;·&nbsp; Deep Dive</p>
+    <h1>Generative AI: The Largest Advance in Modern Technology</h1>
+    <p class="deck">How machines learned to create — and why it changes everything from healthcare to how we write code</p>
+    <div class="byline">
+      <span><strong>By</strong> Kunal Singh</span>
+      <span><strong>Specialisation</strong> AI & Machine Learning</span>
+      <span><strong>Enrollment</strong> E23CSEU1158</span>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+<article>
+
+  <p class="intro">
+    Picture giving a machine nothing but a blank canvas and a single sentence of instruction — and watching it return a fully-written research paper, a photorealistic portrait, or a working software module within moments. That is not a thought experiment anymore. Generative Artificial Intelligence has moved that scenario from the pages of speculative fiction into the everyday reality of students, engineers, doctors, and artists worldwide. Studying this technology as an AIML student, I kept encountering the same realisation: this is not simply another tool layered on top of existing systems. It is a shift in what computing itself is capable of doing.
+  </p>
+
+  <p>
+    Historically, the dominant mode of AI was observational. A model would be shown thousands of X-rays and learn to flag abnormalities; it would study millions of purchase records and learn to recommend products. The output was always a verdict on something pre-existing — a classification, a score, a ranked list. What makes generative AI categorically different is that its output is something <em>new</em>. The model does not retrieve a stored answer or pick from a predefined list; it constructs a response from scratch, token by token, pixel by pixel, note by note.
+  </p>
+
+  <p>
+    That distinction carries enormous weight. A system that can generate coherent long-form text, synthesise realistic imagery, or write and debug code on demand does not just speed up existing workflows — it opens up entirely new categories of work that were previously gated behind rare human skills. This article unpacks how that became possible, what it looks like in practice today, and what challenges we still need to honestly confront.
+  </p>
+
+  <div class="stat-row">
+    <div class="stat">
+      <span class="num">$1.3T</span>
+      <span class="label">Projected global GenAI market by 2032</span>
+    </div>
+    <div class="stat">
+      <span class="num">100M+</span>
+      <span class="label">ChatGPT users within 2 months of launch</span>
+    </div>
+    <div class="stat">
+      <span class="num">1T+</span>
+      <span class="label">Parameters in leading frontier models</span>
+    </div>
+  </div>
+
+  <!-- ── SECTION 1 ── -->
+  <h2>What Generative AI Actually Is</h2>
+
+  <p>
+    Generative AI sits within the broader field of machine learning, but its defining characteristic separates it sharply from other branches. Most ML systems are trained to answer a question about something: is this email spam? Which product will this user buy next? Generative models, by contrast, are trained to <em>produce</em> something — a paragraph, an image, a melody, a block of executable code — that did not exist before the model was asked.
+  </p>
+
+  <p>
+    What enables this is a deep statistical understanding of structure. When a language model reads billions of documents during training, it does not memorise passages — it internalises the patterns that make language coherent: grammar, argument structure, stylistic convention, factual relationships. By the time training concludes, the model has absorbed enough of this structure that it can produce convincing new instances of it on demand. The same principle applies to images, audio, and code, each with their own domain-specific patterns.
+  </p>
+
+  <div class="callout">
+    <p class="callout-title">In Plain Terms</p>
+    <p>Generative AI describes machine learning systems whose primary output is original content — text, images, audio, video, or code — constructed by applying patterns learned from massive training datasets, rather than fetching pre-stored results or assigning labels to existing inputs.</p>
+  </div>
+
+  <!-- ── SECTION 2 ── -->
+  <h2>The Technologies That Made It Possible</h2>
+
+  <p>
+    No single invention explains the generative AI boom — it took three distinct technical breakthroughs colliding within roughly a decade to produce the current moment.
+  </p>
+
+  <h3>The Transformer Architecture (2017)</h3>
+  <p>
+    Before 2017, the dominant models for language tasks processed text sequentially — one word at a time — which created a fundamental bottleneck: information from early in a sentence decayed by the time the model reached the end. The transformer, introduced in a paper titled "Attention Is All You Need," solved this by processing every part of a sequence simultaneously. Its <em>self-attention</em> mechanism lets the model weigh the relevance of any word in a sentence against any other, regardless of distance. This made it possible to train vastly larger models far more efficiently. GPT, Claude, and Gemini are all descendants of this architecture. Without the transformer, none of them would exist.
+  </p>
+
+  <h3>Generative Adversarial Networks (2014)</h3>
+  <p>
+    Ian Goodfellow's GAN framework introduced a clever training dynamic: two separate networks — one dedicated to creating synthetic outputs, one dedicated to rejecting fakes — are pitted against each other in a continuous competition. The generator improves by learning to fool the discriminator; the discriminator improves by learning to catch better fakes. Over many training rounds this adversarial feedback loop produces outputs of remarkable realism. GANs gave the world the first convincing AI-generated human faces and underpinned the early generation of deepfake technology.
+  </p>
+
+  <h3>Diffusion Models (2020–present)</h3>
+  <p>
+    Diffusion models work on a principle that initially sounds counterintuitive: the model is trained by learning to undo damage. During training, clean images are progressively corrupted with random noise until only static remains; the model learns to reverse that process step by step. At inference time, the same reversal process is applied to pure noise, guided by a text description, until a coherent image crystallises. Stable Diffusion and DALL-E 3 both operate this way — and the quality ceiling they have demonstrated has effectively made diffusion the dominant paradigm for image generation.
+  </p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Technology</th>
+        <th>Primary Use</th>
+        <th>Key Examples</th>
+        <th>Year Introduced</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Large Language Models</td>
+        <td>Text generation, reasoning, code</td>
+        <td>GPT-4, Claude, Gemini</td>
+        <td>2018–present</td>
+      </tr>
+      <tr>
+        <td>Generative Adversarial Networks</td>
+        <td>Realistic image & video synthesis</td>
+        <td>StyleGAN, BigGAN</td>
+        <td>2014</td>
+      </tr>
+      <tr>
+        <td>Diffusion Models</td>
+        <td>High-quality image generation</td>
+        <td>Stable Diffusion, DALL-E 3</td>
+        <td>2020</td>
+      </tr>
+      <tr>
+        <td>Natural Language Processing</td>
+        <td>Language understanding & translation</td>
+        <td>BERT, XLNet</td>
+        <td>2018</td>
+      </tr>
+      <tr>
+        <td>Multimodal Models</td>
+        <td>Combined text, image, audio tasks</td>
+        <td>GPT-4o, Gemini Ultra</td>
+        <td>2023–present</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- ── HOW IT WORKS ── -->
+  <h2>How a Generative Model Learns to Create</h2>
+
+  <p>
+    Building a working generative model is a multi-stage process, and each stage has a disproportionate impact on the quality of what eventually reaches users.
+  </p>
+
+  <p>
+    <strong>Data Collection.</strong> Everything begins with scale. Language models are pretrained on corpora spanning trillions of words — web pages, digitised books, academic journals, open-source code. Image models consume hundreds of millions of captioned photographs. The breadth and diversity of this data determines how well the model generalises across topics and contexts.
+  </p>
+
+  <p>
+    <strong>Preprocessing.</strong> Raw scraped data is invariably messy — duplicate pages, toxic content, broken encodings, misaligned captions. Before any training begins, engineers apply extensive filtering and normalisation pipelines. The quality of this step has a larger effect on final model behaviour than many people realise; poorly cleaned data produces models that are subtly but persistently unreliable.
+  </p>
+
+  <p>
+    <strong>Pretraining.</strong> The cleaned data feeds into a training loop that may run for weeks across thousands of specialised processors. For a language model, the learning objective is deceptively simple — predict the next token given everything that came before. Repeated billions of times across a vast corpus, this task forces the model to develop deep, implicit knowledge of grammar, reasoning, factual relationships, and stylistic convention.
+  </p>
+
+  <p>
+    <strong>Alignment & Fine-Tuning.</strong> A raw pretrained model is not yet a safe or useful product. Alignment techniques — most notably Reinforcement Learning from Human Feedback (RLHF) — involve human raters evaluating model outputs, with those ratings used to further train the model toward responses that are accurate, helpful, and safe. This stage is what separates a capable but erratic base model from a reliable assistant.
+  </p>
+
+  <p>
+    <strong>Deployment & Monitoring.</strong> The final model is served through APIs, often with additional safety layers. Monitoring in production is ongoing — models can degrade, be misused in unexpected ways, or encounter inputs far outside the training distribution. This is a live engineering challenge, not a one-time event.
+  </p>
+
+  <div class="pull-quote">
+    "We are not building tools that analyse the world. We are building systems that imagine it — and that distinction changes everything."
+    <cite>— On the nature of generative models</cite>
+  </div>
+
+  <!-- ── APPLICATIONS ── -->
+  <h2>Real-World Applications Today</h2>
+
+  <p>
+    What strikes me most about the current landscape is how rapidly generative AI has moved out of controlled research environments and into tools people use without thinking twice.
+  </p>
+
+  <h3>Productivity & Software Development</h3>
+  <p>
+    LLM-powered writing assistants have become standard equipment for knowledge workers — drafting emails, summarising lengthy documents, structuring arguments, translating content. In software engineering specifically, tools like GitHub Copilot have changed the day-to-day experience of coding. Rather than searching documentation or hunting Stack Overflow for a forgotten syntax pattern, developers describe what they need and get working code back instantly. Studies suggest experienced developers complete tasks measurably faster with these tools, and junior developers can attempt problems that would previously have been out of reach.
+  </p>
+
+  <h3>Creative Industries</h3>
+  <p>
+    Advertising agencies use image generation to prototype campaign visuals before committing to expensive photography shoots. Game studios use AI tools to generate concept art, texture variants, and environmental assets at a pace no human team could match. Indie musicians use audio generation models to produce backing tracks and sound design without needing a full production budget. The commercial implication is a dramatic lowering of the cost floor for creative work — not the elimination of human creatives, but a restructuring of how creative teams operate.
+  </p>
+
+  <h3>Life Sciences & Medicine</h3>
+  <p>
+    The most potentially transformative applications are in healthcare. DeepMind's AlphaFold effectively solved a problem that had stumped structural biology for five decades — predicting the three-dimensional shape of a protein from its amino acid sequence. Protein structure prediction is foundational to drug design, and the tool has already been used by researchers across thousands of institutions. Beyond drug discovery, clinical AI applications assist radiologists in reviewing imaging data and flag anomalies for further review, helping address the chronic global shortage of specialist clinicians.
+  </p>
+
+  <h3>Education</h3>
+  <p>
+    AI tutoring systems can adapt explanations to a student's demonstrated level of understanding, rephrase confusing concepts multiple ways, and provide immediate feedback on written work. For students in under-resourced schools or remote areas, access to this kind of responsive, personalised academic support was previously unavailable at any price. Generative AI does not replace good teachers — but it extends the reach of good teaching significantly.
+  </p>
+
+  <!-- ── CHALLENGES ── -->
+  <h2>The Challenges We Cannot Ignore</h2>
+
+  <p>
+    Enthusiasm for generative AI is easy to justify — but intellectual honesty requires naming the problems directly, without softening them into footnotes.
+  </p>
+
+  <div class="challenge-grid">
+    <div class="challenge-card">
+      <span class="num">01</span>
+      <strong>Hallucination & Accuracy</strong>
+      <p>Models produce authoritative-sounding content that is factually wrong — citations that don't exist, statistics that were never recorded, names attached to events they had nothing to do with. Detection tools exist but remain far behind generation speed.</p>
+    </div>
+    <div class="challenge-card">
+      <span class="num">02</span>
+      <strong>Bias & Representation</strong>
+      <p>Training corpora built from internet text carry the historical inequalities and stereotypes embedded in that text. Without deliberate mitigation, models reproduce and scale those biases — sometimes in ways that are subtle enough to evade casual review.</p>
+    </div>
+    <div class="challenge-card">
+      <span class="num">03</span>
+      <strong>Synthetic Media Misuse</strong>
+      <p>It now takes minutes to produce convincing video of a public figure saying something they never said. The implications for electoral integrity, personal reputation, and institutional trust are severe and only partially addressed by current detection methods.</p>
+    </div>
+    <div class="challenge-card">
+      <span class="num">04</span>
+      <strong>Environmental Cost</strong>
+      <p>A single frontier model training run can consume energy equivalent to hundreds of transatlantic flights and generate tonnes of CO₂. As the industry scales, the environmental footprint scales with it — making efficiency research not optional but urgent.</p>
+    </div>
+    <div class="challenge-card">
+      <span class="num">05</span>
+      <strong>Privacy & IP</strong>
+      <p>Models trained on scraped content may reproduce fragments of copyrighted text or personally identifiable information in their outputs. Courts and regulators are still working out the liability frameworks that govern this — with no consensus yet.</p>
+    </div>
+    <div class="challenge-card">
+      <span class="num">06</span>
+      <strong>Economic Displacement</strong>
+      <p>Generative AI automates well-compensated cognitive work, not just repetitive manual labour. The distributional effects — who benefits, who loses, and across which income brackets — are active policy questions with no easy answers.</p>
+    </div>
+  </div>
+
+  <!-- ── FUTURE ── -->
+  <h2>Where We Are Headed</h2>
+
+  <p>
+    From where I sit as a student in this field, the next few years feel genuinely open-ended in a way that is both exciting and a little vertiginous.
+  </p>
+
+  <p>
+    <strong>Multimodal Convergence.</strong> Current models that handle text alone, or image generation alone, are being superseded by unified architectures that switch fluidly between modalities. A single conversation can already involve uploading an image, asking a question about it, receiving a written analysis, and having the model generate a modified version — all within one session. This convergence will deepen.
+  </p>
+
+  <p>
+    <strong>On-Device AI.</strong> Model compression techniques like quantisation and knowledge distillation are making it feasible to run capable models on consumer hardware. When AI inference moves to the device — no network round-trip, no cloud dependency — it changes the privacy calculus entirely and opens up use cases in environments with unreliable connectivity.
+  </p>
+
+  <p>
+    <strong>Reliability at Scale.</strong> Retrieval-augmented generation, better grounding techniques, and chain-of-thought reasoning are all narrowing the gap between confident and correct. Fully solving hallucination may be a long way off, but meaningful progress is visible year over year.
+  </p>
+
+  <p>
+    <strong>Governance Catching Up.</strong> The EU AI Act, proposed regulations in the United States, and emerging industry standards around watermarking and content provenance represent the early infrastructure of a governance ecosystem. It lags behind the technology — but it exists, and it is being built.
+  </p>
+
+  <p>
+    What I find most compelling is that the trajectory is not a straight line toward either utopia or catastrophe. It is a genuinely contested space where technical choices, policy decisions, and social norms are all still being formed. That makes it one of the most interesting places in engineering to be working right now.
+  </p>
+
+  <!-- ── CONCLUSION ── -->
+  <h2>Conclusion</h2>
+
+  <p>
+    Generative AI is sometimes framed as a threat to human creativity, and sometimes as its ultimate amplifier. Having spent time studying it closely, I think both framings miss something. The more accurate picture is that it is a new kind of collaborator — one that has no intuition, no lived experience, and no aesthetic judgment of its own, but that can execute and iterate at a speed and scale no human team can match. The value it unlocks depends almost entirely on the quality of human direction applied to it.
+  </p>
+
+  <p>
+    For students entering AI and ML right now, this creates an unusual responsibility. We are not just learning to use tools that already exist — we are entering a field where the fundamental rules are still being written, where the ethical norms are still under negotiation, and where the choices made in the next few years will shape the technology for decades. That is not a burden; it is, frankly, an extraordinary opportunity.
+  </p>
+
+  <p>
+    Generative AI may well be remembered as the point where machines stopped being mirrors — reflecting what humans had already made — and started being something closer to partners in making what comes next.
+  </p>
+
+</article>
+</div>
+
+<footer>
+  <div class="container">
+    <p class="author-bio">Kunal Singh is a student of Artificial Intelligence and Machine Learning, exploring the intersection of deep learning and real-world applications.</p>
+    <p>Enrollment No. E23CSEU1158 &nbsp;·&nbsp; AIML Specialisation &nbsp;·&nbsp; Technical Article Submission</p>
+  </div>
+</footer>
+
+</body>
+</html>
